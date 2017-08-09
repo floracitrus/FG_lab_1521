@@ -83,6 +83,7 @@ void invertBits(Bits a, Bits res)
 void leftShiftBits(Bits b, int shift, Bits res)
 {
     if (shift < BITS_PER_WORD * res->nwords) {
+        memset(res->words, 0, res->nwords * sizeof(Word));
         int shift_word = shift / BITS_PER_WORD;
         shift %= BITS_PER_WORD;
         for (int i = 0; i < res->nwords - shift_word; i++)
@@ -97,6 +98,7 @@ void leftShiftBits(Bits b, int shift, Bits res)
 void rightShiftBits(Bits b, int shift, Bits res)
 {
     if (shift < BITS_PER_WORD * res->nwords) {
+        memset(res->words, 0, res->nwords * sizeof(Word));
         int shift_word = shift / BITS_PER_WORD;
         shift %= BITS_PER_WORD;
         for (int i = 0; i < res->nwords - shift_word; i++)
@@ -118,14 +120,12 @@ void setBitsFromBits(Bits from, Bits to)
 // if the bit-string is longer than the size of Bits, truncate higher-order bits
 void setBitsFromString(Bits b, char *bitseq)
 {
-    for (int i = 0; i < b->nwords; i++) b->words[i] = 0;
+    memset(b->words, 0, b->nwords * sizeof(Word));
     for (int i = b->nwords; i > 0; i--) {
         int end = strlen(bitseq) - (b->nwords - i) * BITS_PER_WORD - 1;
-        Word shift = 0;
         for (int j = 0; j < BITS_PER_WORD; j++) {
             if (end - j >= 0) {
-                b->words[i - 1] += (bitseq[end - j] - '0') << shift;
-                shift++;
+                b->words[i - 1] += (bitseq[end - j] - '0') << j;
             } else break;
         }
     }
@@ -134,15 +134,7 @@ void setBitsFromString(Bits b, char *bitseq)
 // display a Bits value as sequence of 0's and 1's
 void showBits(Bits b)
 {
-    for (int i = 0; i < b->nwords; i++) {
-        Word mask = 1;
-        mask <<= BITS_PER_WORD - 1;
-        for (int j = 0; j < BITS_PER_WORD; j++) {
-            if (b->words[i] & mask) 
-                printf("1");
-            else 
-                printf("0");
-            mask >>= 1;
-        }
-    }
+    for (int i = 0; i < b->nwords; i++)
+        for (int j = 0; j < BITS_PER_WORD; j++)
+            printf("%d", (b->words[i] >> (BITS_PER_WORD - 1 - j)) & 1);
 }
