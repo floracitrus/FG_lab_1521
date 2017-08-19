@@ -1,7 +1,7 @@
 # Makefile for COMP1521 Lab03
 
 CC=gcc
-CFLAGS=-Wall -Werror
+CFLAGS=-Wall -Werror -std=c99
 
 all : watb maf
 
