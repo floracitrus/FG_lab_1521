@@ -48,14 +48,21 @@ main:
    la   $a0, msg1
    li   $v0, 4        # printf("n: ");
    syscall            # get an integer
-   li $v0, 5
+   li $v0, 5         #scanf
    syscall
-   move $t0, $v0
+
+    
+   move $s0, $v0    
    la   $a0, msg2
    li   $v0, 4        # printf("n!= ");
-   syscall    
-   jal  fac
-   li $v0, 1 #????   #pinrtf("%d");
+   syscall 
+
+   move $a0,$t0
+#   addi $a0,$s0, 0    
+   
+    jal  fac
+    move $a0, $v0 #ererere
+   li $v0, 1 #not too sure ????   #pinrtf("%d");
    syscall
    la   $a0, eol
    li   $v0, 4        # printf("\n");
@@ -76,17 +83,24 @@ fac_ret_save:
 
 fac:
    sw   $ra, fac_ret_save
-   addi $a0,$t0, 0 #not too sure if t0 added into a0
+  #not too sure if t0 added into a0
    li $t1, 1
    li $t2, 1
-   loop:
-      beq $t1, $t0, exit
-      mul $t2, $t2, $t1
+
+loop:
+      beq $t1, $a0, exit
+      #mul $t2, $t2, $t1
       addi $t1,$t1,1
-      j loop
-   exit:
+      mul $t2,$t2,$t1
+    j loop
+exit:
 #  ... your code for fac() goes here
-   
+   move $v0,$t2
    lw   $ra, fac_ret_save
    jr   $ra            # return ($v0)
 
+
+
+#mul $t1, $t2, $t3   #t2=i t3=N
+#add $t1, $t1, $t4   #t1=i*N+j
+#lb  $t5, board($t1) board[i][j]=t5

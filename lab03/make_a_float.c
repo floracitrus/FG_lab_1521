@@ -16,7 +16,7 @@ struct _float {
    // define bit_fields for sign, exp and frac
    // obviously they need to be larger than 1-bit each
    // and may need to be defined in a different order
-   unsigned int sign:1, exp:1, frac:1;
+   unsigned int frac:23,exp:8,sign:1;
 };
 typedef struct _float Float32;
 
