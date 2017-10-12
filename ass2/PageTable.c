@@ -30,10 +30,6 @@ struct PTE {
    PTE *prev;        // the previous pointer
 };
 
-//typedef struct QRep {
-//   PTE * head;       // a queue representation
-//   PTE * tail;       // with head and tail
-//}QRep;
 
 // The virtual address space of the process is managed
 //  by an array of Page Table Entries (PTEs)
@@ -47,30 +43,19 @@ static int replacePolicy;  // how to do page replacement
 static PTE *head;      // head of queue
 static PTE *tail;      // tail of queue
 
-//static Queue fifoQueue;     // the first in first out queue;
-//static Queue lruQueue;      // the least recently used queue;
-
-
-//Queue newQueue()
-//{
-//   Queue q = malloc(sizeof(QRep));
-//   head = NULL;
-//   tail = NULL;
-//   return q;
-//}
 
 // Forward refs for private functions
 //find the victim
 static int findVictim(int);
 
-//append queue node(PTE) at tail
-void QueueAppend(PTE*, PTE*, PTE*) ;
+//append queue node pointer (PTE*) at tail
+void QueueAppend(PTE*) ;
 
-//leave the queue node(PTE) from head
-int QueueLeave(PTE*,PTE* );
+//leave the queue node pointer (PTE*) from head
+int QueueLeave();
 
 //delete from the middle of list and then append to tail
-void reOrder(PTE*, PTE*, PTE*);
+void reOrder(PTE*);
 
 // initPageTable: create/initialise Page Table data structures
 void initPageTable(int policy, int np)
@@ -82,11 +67,9 @@ void initPageTable(int policy, int np)
    }
    replacePolicy = policy;
    nPages = np;
-   
+
    head = NULL;
    tail = NULL;
-   //fifoQueue = newQueue();
-   //lruQueue = newQueue();
 
    for (int i = 0; i < nPages; i++) {
       PTE *p = &PageTable[i];
@@ -126,14 +109,13 @@ int requestPage(int pno, char mode, int time)
          printf("Evict page %d\n",vno);
 #endif
          PTE *victim_p = &PageTable[vno];
-         
+
          // if victim page modified, save its frame
          if(victim_p->modified != 0)
             saveFrame(fno);
-         
          // collect frame# (fno) for victim page
          fno = victim_p->frame;
-         
+
          // update PTE for victim page
          // - new status
          // - no longer modified
@@ -147,10 +129,10 @@ int requestPage(int pno, char mode, int time)
 
       }
       printf("Page %d given frame %d\n",pno,fno);
-      
+
       // load page pno into frame fno
       loadFrame(fno, pno, time);
-      
+
       // update PTE for page
       // - new status
       // - not yet modified
@@ -160,24 +142,15 @@ int requestPage(int pno, char mode, int time)
       p->modified = 0;
       p->frame = fno;
       p->loadTime = time;
-      
-      QueueAppend(head, tail, p);
-      //lru queue
-      //if(replacePolicy == REPL_LRU)
-      //   //QueueAppend(lruQueue, p);
-     
-      ////fifo queue
-      //if(replacePolicy == REPL_FIFO)
-      //   QueueAppend(head, tail, p)
-      //   //QueueAppend(fifoQueue, p);
-      
+      QueueAppend(p);
+
       break;
    case IN_MEMORY:
       countPageHit();
       //if in memory then the lruQueue need to reOrder
       //and put the latest used to the tail
       if(replacePolicy == REPL_LRU)
-         reOrder(head, tail, p);
+         reOrder(p);
 
       break;
    default:
@@ -202,12 +175,14 @@ static int findVictim(int time)
    switch (replacePolicy) {
    case REPL_LRU:
       // TODO: implement LRU strategy
-      victim = QueueLeave(head, tail);
+      victim = QueueLeave();
+
       //printf("victim is %d\n",victim);
       break;
    case REPL_FIFO:
       // TODO: implement FIFO strategy
-      victim = QueueLeave(head, tail);
+      victim = QueueLeave();
+
       //printf("victim is %d\n",victim);
       break;
    case REPL_CLOCK:
@@ -217,8 +192,8 @@ static int findVictim(int time)
 }
 
 
-//tail is the latest used
-void QueueAppend(PTE* head, PTE* tail, PTE* new)
+//tail is the latest used in lru situation
+void QueueAppend(PTE* new)
 {
    if(head == NULL){
       head = new;
@@ -231,12 +206,10 @@ void QueueAppend(PTE* head, PTE* tail, PTE* new)
 }
 
 //leave the queue from head
-int QueueLeave(PTE* head, PTE* tail)
-{  
-   //assert(head!=NULL)
+int QueueLeave()
+{
+
    PTE * old = head;
-   //if(head == NULL)
-      //return 0;
    int pno = old->pageNo;
 
    head = old->next;
@@ -249,15 +222,15 @@ int QueueLeave(PTE* head, PTE* tail)
 
 }
 //reOrder the queue to satisfied O(1) complexity
-void reOrder(PTE* head, PTE* tail, PTE * new)
+void reOrder(PTE * new)
 {
-   
+   if(tail == NULL && head == NULL)
+      return;
    //if this queue only have one, then do nothing
    if(new == head && new == tail)
       return;
-   
+
    if(new != tail){
-      
       PTE* prev = new->prev;
       PTE* next = new->next;
       if(prev!=NULL)
@@ -309,3 +282,4 @@ void showPageTableStatus(void)
       printf("\n");
    }
 }
+
