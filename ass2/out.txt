@@ -1,0 +1,1445 @@
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]      -   no      -       -       -       0       0
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]      -   no      -       -       -       0       0
+[06]      -   no      -       -       -       0       0
+[07]      -   no      -       -       -       0       0
+
+=== Request r1 @ t=0 ===
+Page 1 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem   no      0       0       0       1       0
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]      -   no      -       -       -       0       0
+[06]      -   no      -       -       -       0       0
+[07]      -   no      -       -       -       0       0
+
+=== Request w1 @ t=1 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       1       0       1       1
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]      -   no      -       -       -       0       0
+[06]      -   no      -       -       -       0       0
+[07]      -   no      -       -       -       0       0
+
+=== Request r1 @ t=2 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       2       0       2       1
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]      -   no      -       -       -       0       0
+[06]      -   no      -       -       -       0       0
+[07]      -   no      -       -       -       0       0
+
+=== Request r5 @ t=3 ===
+Page 5 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       2       0       2       1
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]    mem   no      1       3       3       1       0
+[06]      -   no      -       -       -       0       0
+[07]      -   no      -       -       -       0       0
+
+=== Request w6 @ t=4 ===
+Page 6 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       2       0       2       1
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       4       4       0       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r1 @ t=5 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       5       0       3       1
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       4       4       0       1
+[07]      -   no      -       -       -       0       0
+
+=== Request w1 @ t=6 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       6       0       3       2
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       4       4       0       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r6 @ t=7 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       6       0       3       2
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]      -   no      -       -       -       0       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=8 ===
+Page 4 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       6       0       3       2
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]    mem   no      3       8       8       1       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=9 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      0       6       0       3       2
+[02]      -   no      -       -       -       0       0
+[03]      -   no      -       -       -       0       0
+[04]    mem   no      3       9       8       2       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=10 ===
+victim is 1
+Evict page 1
+Page 3 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      10      10       1       0
+[04]    mem   no      3       9       8       2       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=11 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      11      10       2       0
+[04]    mem   no      3       9       8       2       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=12 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      12      10       3       0
+[04]    mem   no      3       9       8       2       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=13 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      12      10       3       0
+[04]    mem   no      3      13       8       3       0
+[05]    mem   no      1       3       3       1       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r5 @ t=14 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      12      10       3       0
+[04]    mem   no      3      13       8       3       0
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=15 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      15      10       4       0
+[04]    mem   no      3      13       8       3       0
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=16 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      16      10       5       0
+[04]    mem   no      3      13       8       3       0
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request w4 @ t=17 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      16      10       5       0
+[04]    mem  yes      3      17       8       3       1
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r3 @ t=18 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      17       8       3       1
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=19 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      19       8       4       1
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=20 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      20       8       5       1
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2       7       4       1       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r6 @ t=21 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      20       8       5       1
+[05]    mem   no      1      14       3       2       0
+[06]    mem  yes      2      21       4       2       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r5 @ t=22 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      20       8       5       1
+[05]    mem   no      1      22       3       3       0
+[06]    mem  yes      2      21       4       2       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r4 @ t=23 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]    mem   no      1      22       3       3       0
+[06]    mem  yes      2      21       4       2       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r6 @ t=24 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]    mem   no      1      22       3       3       0
+[06]    mem  yes      2      24       4       3       1
+[07]      -   no      -       -       -       0       0
+
+=== Request r7 @ t=25 ===
+victim is 5
+Evict page 5
+Page 7 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]    mem  yes      2      24       4       3       1
+[07]    mem   no      1      25      25       1       0
+
+=== Request r7 @ t=26 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]    mem  yes      2      24       4       3       1
+[07]    mem   no      1      26      25       2       0
+
+=== Request r7 @ t=27 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]      -   no      -       -       -       0       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]    mem  yes      2      24       4       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r2 @ t=28 ===
+victim is 6
+Evict page 6
+Page 2 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      28      28       1       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r2 @ t=29 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      29      28       2       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r2 @ t=30 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      30      28       3       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r2 @ t=31 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      31      28       4       0
+[03]    mem   no      0      18      10       6       0
+[04]    mem  yes      3      23       8       6       1
+[05]   disk   no      -       -       -       3       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r5 @ t=32 ===
+victim is 4
+Evict page 4
+Page 5 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      31      28       4       0
+[03]    mem   no      0      18      10       6       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      27      25       3       0
+
+=== Request r7 @ t=33 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      31      28       4       0
+[03]    mem   no      0      18      10       6       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      33      25       4       0
+
+=== Request r7 @ t=34 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      31      28       4       0
+[03]    mem   no      0      18      10       6       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request r3 @ t=35 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem   no      2      31      28       4       0
+[03]    mem   no      0      35      10       7       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request w2 @ t=36 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      36      28       4       1
+[03]    mem   no      0      35      10       7       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request w2 @ t=37 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      37      28       4       2
+[03]    mem   no      0      35      10       7       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request w2 @ t=38 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      38      28       4       3
+[03]    mem   no      0      35      10       7       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request r2 @ t=39 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      39      28       5       3
+[03]    mem   no      0      35      10       7       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request r3 @ t=40 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      39      28       5       3
+[03]    mem   no      0      40      10       8       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request r2 @ t=41 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      41      28       6       3
+[03]    mem   no      0      40      10       8       0
+[04]   disk   no      -       -       -       6       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request r4 @ t=42 ===
+victim is 3
+Evict page 3
+Page 4 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]   disk   no      -       -       -       3       2
+[02]    mem  yes      2      41      28       6       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      0      42      42       7       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      1      34      25       5       0
+
+=== Request w1 @ t=43 ===
+victim is 7
+Evict page 7
+Page 1 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      1      43      43       3       3
+[02]    mem  yes      2      41      28       6       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      0      42      42       7       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]   disk   no      -       -       -       5       0
+
+=== Request r7 @ t=44 ===
+victim is 2
+Evict page 2
+Page 7 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]      -   no      -       -       -       0       0
+[01]    mem  yes      1      43      43       3       3
+[02]   disk   no      -       -       -       6       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      0      42      42       7       1
+[05]    mem   no      3      32      32       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      2      44      44       6       0
+
+=== Request r0 @ t=45 ===
+victim is 5
+Evict page 5
+Page 0 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      45      45       1       0
+[01]    mem  yes      1      43      43       3       3
+[02]   disk   no      -       -       -       6       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      0      42      42       7       1
+[05]   disk   no      -       -       -       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      2      44      44       6       0
+
+=== Request r0 @ t=46 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]    mem  yes      1      43      43       3       3
+[02]   disk   no      -       -       -       6       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      0      42      42       7       1
+[05]   disk   no      -       -       -       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      2      44      44       6       0
+
+=== Request r2 @ t=47 ===
+victim is 4
+Evict page 4
+Page 2 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]    mem  yes      1      43      43       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]   disk   no      -       -       -       7       1
+[05]   disk   no      -       -       -       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      2      44      44       6       0
+
+=== Request r7 @ t=48 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]    mem  yes      1      43      43       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]   disk   no      -       -       -       7       1
+[05]   disk   no      -       -       -       4       0
+[06]   disk   no      -       -       -       3       1
+[07]    mem   no      2      48      44       7       0
+
+=== Request w6 @ t=49 ===
+victim is 1
+Evict page 1
+Page 6 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]   disk   no      -       -       -       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]   disk   no      -       -       -       7       1
+[05]   disk   no      -       -       -       4       0
+[06]    mem  yes      1      49      49       3       2
+[07]    mem   no      2      48      44       7       0
+
+=== Request r6 @ t=50 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]   disk   no      -       -       -       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]   disk   no      -       -       -       7       1
+[05]   disk   no      -       -       -       4       0
+[06]    mem  yes      1      50      49       4       2
+[07]    mem   no      2      48      44       7       0
+
+=== Request r4 @ t=51 ===
+victim is 7
+Evict page 7
+Page 4 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      46      45       2       0
+[01]   disk   no      -       -       -       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]   disk   no      -       -       -       4       0
+[06]    mem  yes      1      50      49       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r5 @ t=52 ===
+victim is 0
+Evict page 0
+Page 5 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       3       3
+[02]    mem   no      0      47      47       7       3
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]    mem   no      3      52      52       5       0
+[06]    mem  yes      1      50      49       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request w2 @ t=53 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       3       3
+[02]    mem  yes      0      53      47       7       4
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]    mem   no      3      52      52       5       0
+[06]    mem  yes      1      50      49       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r1 @ t=54 ===
+victim is 2
+Evict page 2
+Page 1 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem   no      0      54      54       4       3
+[02]   disk   no      -       -       -       7       4
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]    mem   no      3      52      52       5       0
+[06]    mem  yes      1      50      49       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request w1 @ t=55 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]   disk   no      -       -       -       7       4
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]    mem   no      3      52      52       5       0
+[06]    mem  yes      1      50      49       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r2 @ t=56 ===
+victim is 6
+Evict page 6
+Page 2 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]    mem   no      1      56      56       8       4
+[03]   disk   no      -       -       -       8       0
+[04]    mem   no      2      51      51       8       1
+[05]    mem   no      3      52      52       5       0
+[06]   disk   no      -       -       -       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r3 @ t=57 ===
+victim is 4
+Evict page 4
+Page 3 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem   no      2      57      57       9       0
+[04]   disk   no      -       -       -       8       1
+[05]    mem   no      3      52      52       5       0
+[06]   disk   no      -       -       -       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r4 @ t=58 ===
+victim is 5
+Evict page 5
+Page 4 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem   no      2      57      57       9       0
+[04]    mem   no      3      58      58       9       1
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request w3 @ t=59 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem   no      3      58      58       9       1
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request w4 @ t=60 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      0      55      54       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem  yes      3      60      58       9       2
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       4       2
+[07]   disk   no      -       -       -       7       0
+
+=== Request r7 @ t=61 ===
+victim is 1
+Evict page 1
+Page 7 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem  yes      3      60      58       9       2
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       4       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request w4 @ t=62 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       4
+[02]    mem   no      1      56      56       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem  yes      3      62      58       9       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       4       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request r6 @ t=63 ===
+victim is 2
+Evict page 2
+Page 6 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       4
+[02]   disk   no      -       -       -       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem  yes      3      62      58       9       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request r4 @ t=64 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       4
+[02]   disk   no      -       -       -       8       4
+[03]    mem  yes      2      59      57       9       1
+[04]    mem  yes      3      64      58      10       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request w1 @ t=65 ===
+victim is 3
+Evict page 3
+Page 1 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]   disk   no      -       -       -       8       4
+[03]   disk   no      -       -       -       9       1
+[04]    mem  yes      3      64      58      10       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request r3 @ t=66 ===
+victim is 4
+Evict page 4
+Page 3 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]   disk   no      -       -       -       8       4
+[03]    mem   no      3      66      66      10       1
+[04]   disk   no      -       -       -      10       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]    mem   no      0      61      61       8       0
+
+=== Request r4 @ t=67 ===
+victim is 7
+Evict page 7
+Page 4 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]   disk   no      -       -       -       8       4
+[03]    mem   no      3      66      66      10       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]   disk   no      -       -       -       8       0
+
+=== Request r3 @ t=68 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]   disk   no      -       -       -       8       4
+[03]    mem   no      3      68      66      11       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]   disk   no      -       -       -       8       0
+
+=== Request r3 @ t=69 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]   disk   no      -       -       -       8       4
+[03]    mem   no      3      69      66      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      1      63      63       5       2
+[07]   disk   no      -       -       -       8       0
+
+=== Request r2 @ t=70 ===
+victim is 6
+Evict page 6
+Page 2 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]    mem  yes      2      65      65       4       5
+[02]    mem   no      1      70      70       9       4
+[03]    mem   no      3      69      66      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       2
+[07]   disk   no      -       -       -       8       0
+
+=== Request w6 @ t=71 ===
+victim is 1
+Evict page 1
+Page 6 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      70      70       9       4
+[03]    mem   no      3      69      66      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]   disk   no      -       -       -       8       0
+
+=== Request w7 @ t=72 ===
+victim is 3
+Evict page 3
+Page 7 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      70      70       9       4
+[03]   disk   no      -       -       -      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      72      72       8       1
+
+=== Request r7 @ t=73 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      70      70       9       4
+[03]   disk   no      -       -       -      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      73      72       9       1
+
+=== Request r7 @ t=74 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      70      70       9       4
+[03]   disk   no      -       -       -      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r2 @ t=75 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       2       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      75      70      10       4
+[03]   disk   no      -       -       -      12       1
+[04]    mem   no      0      67      67      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r0 @ t=76 ===
+victim is 4
+Evict page 4
+Page 0 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      76      76       3       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      1      75      70      10       4
+[03]   disk   no      -       -       -      12       1
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r3 @ t=77 ===
+victim is 2
+Evict page 2
+Page 3 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      76      76       3       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      10       4
+[03]    mem   no      1      77      77      13       1
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request w3 @ t=78 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      76      76       3       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      10       4
+[03]    mem  yes      1      78      77      13       2
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem  yes      2      71      71       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r2 @ t=79 ===
+victim is 6
+Evict page 6
+Page 2 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      76      76       3       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      78      77      13       2
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r0 @ t=80 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      78      77      13       2
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request w3 @ t=81 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      81      77      13       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r3 @ t=82 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      82      77      14       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request r3 @ t=83 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      83      77      15       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      74      72      10       1
+
+=== Request w7 @ t=84 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      83      77      15       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      84      72      10       2
+
+=== Request r7 @ t=85 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      83      77      15       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      85      72      11       2
+
+=== Request r7 @ t=86 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      83      77      15       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]   disk   no      -       -       -       5       3
+[07]    mem  yes      3      86      72      12       2
+
+=== Request r6 @ t=87 ===
+victim is 7
+Evict page 7
+Page 6 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      83      77      15       3
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      3      87      87       6       3
+[07]   disk   no      -       -       -      12       2
+
+=== Request w3 @ t=88 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      80      76       4       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      88      77      15       4
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      3      87      87       6       3
+[07]   disk   no      -       -       -      12       2
+
+=== Request r0 @ t=89 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      0      89      76       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      88      77      15       4
+[04]   disk   no      -       -       -      11       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      3      87      87       6       3
+[07]   disk   no      -       -       -      12       2
+
+=== Request r4 @ t=90 ===
+victim is 0
+Evict page 0
+Page 4 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]    mem  yes      1      88      77      15       4
+[04]    mem   no      0      90      90      12       3
+[05]   disk   no      -       -       -       5       0
+[06]    mem   no      3      87      87       6       3
+[07]   disk   no      -       -       -      12       2
+
+=== Request r5 @ t=91 ===
+victim is 3
+Evict page 3
+Page 5 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      90      90      12       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem   no      3      87      87       6       3
+[07]   disk   no      -       -       -      12       2
+
+=== Request w6 @ t=92 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      90      90      12       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem  yes      3      92      87       6       4
+[07]   disk   no      -       -       -      12       2
+
+=== Request w6 @ t=93 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      90      90      12       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem  yes      3      93      87       6       5
+[07]   disk   no      -       -       -      12       2
+
+=== Request w6 @ t=94 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      90      90      12       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem  yes      3      94      87       6       6
+[07]   disk   no      -       -       -      12       2
+
+=== Request r4 @ t=95 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]    mem   no      2      79      79      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      95      90      13       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem  yes      3      94      87       6       6
+[07]   disk   no      -       -       -      12       2
+
+=== Request r7 @ t=96 ===
+victim is 2
+Evict page 2
+Page 7 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      95      90      13       3
+[05]    mem   no      1      91      91       6       0
+[06]    mem  yes      3      94      87       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request r5 @ t=97 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      95      90      13       3
+[05]    mem   no      1      97      91       7       0
+[06]    mem  yes      3      94      87       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request r5 @ t=98 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       5       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      95      90      13       3
+[05]    mem   no      1      98      91       8       0
+[06]    mem  yes      3      94      87       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request r0 @ t=99 ===
+victim is 6
+Evict page 6
+Page 0 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      99      99       6       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      11       4
+[03]   disk   no      -       -       -      15       4
+[04]    mem   no      0      95      90      13       3
+[05]    mem   no      1      98      91       8       0
+[06]   disk   no      -       -       -       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request r3 @ t=100 ===
+victim is 4
+Evict page 4
+Page 3 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      99      99       6       0
+[01]   disk   no      -       -       -       4       5
+[02]   disk   no      -       -       -      11       4
+[03]    mem   no      0     100     100      16       4
+[04]   disk   no      -       -       -      13       3
+[05]    mem   no      1      98      91       8       0
+[06]   disk   no      -       -       -       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request r1 @ t=101 ===
+victim is 5
+Evict page 5
+Page 1 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      99      99       6       0
+[01]    mem   no      1     101     101       5       5
+[02]   disk   no      -       -       -      11       4
+[03]    mem   no      0     100     100      16       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       6
+[07]    mem   no      2      96      96      13       2
+
+=== Request w2 @ t=102 ===
+victim is 7
+Evict page 7
+Page 2 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      99      99       6       0
+[01]    mem   no      1     101     101       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]    mem   no      0     100     100      16       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       6
+[07]   disk   no      -       -       -      13       2
+
+=== Request r3 @ t=103 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem   no      3      99      99       6       0
+[01]    mem   no      1     101     101       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]    mem   no      0     103     100      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       6
+[07]   disk   no      -       -       -      13       2
+
+=== Request w6 @ t=104 ===
+victim is 0
+Evict page 0
+Page 6 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       6       0
+[01]    mem   no      1     101     101       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]    mem   no      0     103     100      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]   disk   no      -       -       -      13       2
+
+=== Request r7 @ t=105 ===
+victim is 3
+Evict page 3
+Page 7 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       6       0
+[01]    mem   no      1     101     101       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     105     105      14       2
+
+=== Request w0 @ t=106 ===
+victim is 1
+Evict page 1
+Page 0 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     106     106       6       1
+[01]   disk   no      -       -       -       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     105     105      14       2
+
+=== Request r0 @ t=107 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]   disk   no      -       -       -       5       5
+[02]    mem  yes      2     102     102      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     105     105      14       2
+
+=== Request r1 @ t=108 ===
+victim is 2
+Evict page 2
+Page 1 given frame 2
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     108     108       6       5
+[02]   disk   no      -       -       -      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     105     105      14       2
+
+=== Request r1 @ t=109 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]   disk   no      -       -       -      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     105     105      14       2
+
+=== Request r7 @ t=110 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]   disk   no      -       -       -      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     110     105      15       2
+
+=== Request r7 @ t=111 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]   disk   no      -       -       -      11       5
+[03]   disk   no      -       -       -      17       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]    mem  yes      3     104     104       6       7
+[07]    mem   no      0     111     105      16       2
+
+=== Request r3 @ t=112 ===
+victim is 6
+Evict page 6
+Page 3 given frame 3
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]   disk   no      -       -       -      11       5
+[03]    mem   no      3     112     112      18       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]    mem   no      0     111     105      16       2
+
+=== Request r3 @ t=113 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]   disk   no      -       -       -      11       5
+[03]    mem   no      3     113     112      19       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]    mem   no      0     111     105      16       2
+
+=== Request r2 @ t=114 ===
+victim is 7
+Evict page 7
+Page 2 given frame 0
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]    mem   no      0     114     114      12       5
+[03]    mem   no      3     113     112      19       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]   disk   no      -       -       -      16       2
+
+=== Request r3 @ t=115 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem   no      2     109     108       7       5
+[02]    mem   no      0     114     114      12       5
+[03]    mem   no      3     115     112      20       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]   disk   no      -       -       -      16       2
+
+=== Request w1 @ t=116 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]    mem  yes      1     107     106       7       1
+[01]    mem  yes      2     116     108       7       6
+[02]    mem   no      0     114     114      12       5
+[03]    mem   no      3     115     112      20       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]   disk   no      -       -       -      16       2
+
+=== Request w7 @ t=117 ===
+victim is 0
+Evict page 0
+Page 7 given frame 1
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       7       1
+[01]    mem  yes      2     116     108       7       6
+[02]    mem   no      0     114     114      12       5
+[03]    mem   no      3     115     112      20       4
+[04]   disk   no      -       -       -      13       3
+[05]   disk   no      -       -       -       8       0
+[06]   disk   no      -       -       -       6       7
+[07]    mem  yes      1     117     117      16       3
+
+=== Request r7 @ t=118 ===
+Page Status Mod?  Frame  Acc(t) Load(t)  #Peeks  #Pokes
+[00]   disk   no      -       -       -       7       1
+[01]    mem  yes      2     116     108       7       6
+[02]    mem   no      0     114     114      12       5
+[03]    mem   no      3     115     112      20       4
+[04]   disk   no      -       -       -   
