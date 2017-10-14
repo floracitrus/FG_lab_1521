@@ -51,17 +51,90 @@ int main(int argc, char *argv[], char *envp[])
       if (strcmp(line,"") == 0) { printf("mysh$ "); continue; }
 
       // TODO: implement the tokenise/fork/execute/cleanup code
+      char ** token = tokenise(line, " ");
 
+      
+      pid = fork();
+      if(pid != 0){
+         wait(&stat);
+      }
+      else{ 
+         execute(token, path, envp);
+      }
+      freeTokens(token);
       printf("mysh$ ");
+      
    }
    printf("\n");
+   freeTokens(path);
+   
+   
    return(EXIT_SUCCESS);
 }
+//args = tokenise the command line
+//if (args[0] starts with '/' or '.') {
+//   check if the file called args[0] is executable
+//   if so, use args[0] as the command
+//else {
+//   for each of the directories D in the path {
+//      see if an executable file called "D/args[0]" exists
+//      if it does, use that file name as the command
+//   }
+//}
+//if (no executable file found)
+//   print Command not found message
+//else {
+//   print the full name of the command being executed
+//   use execve() to attempt to run the command with args and envp
+//   if doesn't run, perror("Exec failed")
+//}
+//exit the child process (since execute() is not supposed to return)
+
 
 // execute: run a program, given command-line args, path and envp
 void execute(char **args, char **path, char **envp)
 {
    // TODO: implement the find-the-executable and execve() it code
+   char command[80] = {0};
+   if(args[0][0]=='/' || args[0][0]=='.'){
+      if(isExecutable(args[0]) == 1){
+         strcpy(command, args[0]);
+
+      }else{
+         for(int i = 0; path[i]!='\0'; i++){
+            char str[80];
+            strcat(str, path[i]);
+            strcat(str, "/");
+            strcat(str, args[0]);
+            if(isExecutable(str) == 1){
+               strcpy(command, str);
+            }
+         }
+         int flag = 0;
+         for(int i = 0; i<80;i++){
+            if(command[i]==0){
+               flag = 0;
+            }else{
+               flag = 1;
+            }
+         }
+         if(flag == 0){
+            printf("Command not found \n");
+         }
+         else{
+            for(int i = 0;command[i]!='\0';i++){
+               printf("%c",command[i]);
+            }
+            printf("\n");
+            int retval = execve(command, args, envp);
+            if(retval == -1){
+               printf("Exec failed");
+            }
+         }
+         _exit(2);
+      }
+   }
+
 }
 
 // isExecutable: check whether this process can execute a file
