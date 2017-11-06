@@ -8,22 +8,22 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <assert.h>
-typedef struct node Node;
-
-struct node {
-   int  val;
-   Node *next;
-};
- 
-void freeList(Node *list)
-{
-   Node *curr=list;
-   while(curr != NULL){
-   		Node* temp = curr;
-   		curr = curr->next;
-   		free(temp);
-   }
-}
+//typedef struct node Node;
+//
+//struct node {
+//   int  val;
+//   Node *next;
+//};
+// 
+//void freeList(Node *list)
+//{
+//   Node *curr=list;
+//   while(curr != NULL){
+//   		Node* temp = curr;
+//   		curr = curr->next;
+//   		free(temp);
+//   }
+//}
 
  
 typedef unsigned char uchar;

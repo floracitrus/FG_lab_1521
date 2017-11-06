@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include <assert.h>
 
-extern char *strdup(char *);
+//extern char *strdup(char *);
 void trim(char *);
 char **tokenise(char *, char *);
 void freeTokens(char **);
@@ -94,46 +94,80 @@ int main(int argc, char *argv[], char *envp[])
 // execute: run a program, given command-line args, path and envp
 void execute(char **args, char **path, char **envp)
 {
-   // TODO: implement the find-the-executable and execve() it code
-   char command[80] = {0};
-   if(args[0][0]=='/' || args[0][0]=='.'){
+   int exec_exist = 0;
+   char * cmd = malloc(BUFSIZ * sizeof(char));
+   int i;
+   int rv;
+   if(args[0][0]=='.'||args[0][0]=='/'){
       if(isExecutable(args[0]) == 1){
-         strcpy(command, args[0]);
-
-      }else{
-         for(int i = 0; path[i]!='\0'; i++){
-            char str[80];
-            strcat(str, path[i]);
-            strcat(str, "/");
-            strcat(str, args[0]);
-            if(isExecutable(str) == 1){
-               strcpy(command, str);
-            }
-         }
-         int flag = 0;
-         for(int i = 0; i<80;i++){
-            if(command[i]==0){
-               flag = 0;
-            }else{
-               flag = 1;
-            }
-         }
-         if(flag == 0){
-            printf("Command not found \n");
-         }
-         else{
-            for(int i = 0;command[i]!='\0';i++){
-               printf("%c",command[i]);
-            }
-            printf("\n");
-            int retval = execve(command, args, envp);
-            if(retval == -1){
-               printf("Exec failed");
-            }
-         }
-         _exit(2);
+         exec_exist = 1;
+         strcpy(cmd, args[0]);
       }
    }
+   else{
+      for(i = 0; path[i]!=NULL; i++){
+         strcpy(cmd, path[i]);
+         strcat(cmd, "/");
+         strcat(cmd, args[0]);
+         if(isExecutable(cmd)){
+            exec_exist = 1;
+         }
+         if(exec_exist) break;
+         memset(cmd, 0, BUFSIZ);
+      }
+   }
+   if(!exec_exist){
+      fprintf(stderr, "command not found\n" );
+   }
+   else{
+      fprintf(stdout, "Executing: %s\n",cmd);
+      rv = execve(cmd, args, envp);
+      if(rv == -1){
+         fprintf(stderr, "Exec failed\n");
+         _exit(EXIT_FAILURE);
+      }
+   }
+   _exit(2);
+
+   // TODO: implement the find-the-executable and execve() it code
+   //char command[80] = {0};
+   //if(args[0][0]=='/' || args[0][0]=='.'){
+   //   if(isExecutable(args[0]) == 1){
+   //      strcpy(command, args[0]);
+   //   }
+   //   else{
+   //      for(int i = 0; path[i]!='\0'; i++){
+   //         char str[80];
+   //         strcat(str, path[i]);
+   //         strcat(str, "/");
+   //         strcat(str, args[0]);
+   //         if(isExecutable(str) == 1)
+   //            strcpy(command, str);
+   //      }
+   //      int flag = 0;
+   //      for(int i = 0; i < 80;i++){
+   //         if(command[i] == 0){
+   //            flag = 0;
+   //         }else{
+   //            flag = 1;
+   //         }
+   //      }
+   //      if(flag == 0){
+   //         printf("Command not found \n");
+   //      }
+   //      else{
+   //         for(int i = 0;command[i]!='\0';i++){
+   //            printf("%c",command[i]);
+   //         }
+   //         printf("\n");
+   //         int retval = execve(command, args, envp);
+   //         if(retval == -1){
+   //            printf("Exec failed");
+   //         }
+   //      }
+   //      _exit(2);
+   //   }
+   //}
 
 }
 

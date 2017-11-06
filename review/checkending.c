@@ -11,8 +11,8 @@ union _all {
 int main(int argc, char const *argv[])
 {
 	union _all a;
-	a.ival=0x00;
-	printf("%x\n",a.ival );//less significant bit comes first
+	a.ival=0x01;
+	printf("%x\n",a.ival);//less significant bit comes first
 	printf("%c\n", a.cval);
 
 	return 0;
