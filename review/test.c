@@ -26,7 +26,10 @@ int main(void)
       // 0111 1110
       unsigned char x = 0x7E;
       printf("%d\n",x);
-
+      double *p = 0x10000000;
+      printf("%x\n",*p);
+      p += 2;
+      printf("%x\n",*p);
       return 0;
    }
 }

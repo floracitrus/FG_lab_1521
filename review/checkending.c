@@ -1,31 +1,35 @@
-//#include <stdio.h>
-//#include <stdlib.h>
-//union _all {
-//   int   ival;
-//   char cval;
-//   //char  sval[4];
-//   //float fval;
-//   //unsigned int uval;
-//};
-//
-//int main(int argc, char const *argv[])
-//{
-//	union _all a;
-//	a.ival=0x01;
-//	printf("%x\n",a.ival);//less significant bit comes first
-//	printf("%c\n", a.cval);
-//
-//	return 0;
-//}//
-
 #include <stdio.h>
 #include <stdlib.h>
-
-struct _bit_fields {
-   unsigned int first_bit    : 1,
-                next_7_bits  : 7,
-                last_24_bits : 24;
+union _all {
+   int   ival;
+   char cval;
+   char  sval[4];
+   float fval;
+   unsigned int uval;
 };
+
+int main(int argc, char const *argv[])
+{
+	union _all a;
+	a.uval=0x00313234;
+	printf("%x\n",a.ival);// 313234
+	printf("%c\n", a.cval);//got 4 as less significant bit comes first
+
+	printf("%s\n", a.sval);//421 as ascii of 4 is 34, 2 is 32, 1 is 31
+	printf("%d\n",a.ival);
+	printf("%f\n",a.fval);
+	
+	return 0;
+}
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// struct _bit_fields {
+//    unsigned int first_bit    : 1,
+//                 next_7_bits  : 7,
+//                 last_24_bits : 24;
+//};
 
 //#if 1
 // first attempt
@@ -46,30 +50,30 @@ struct _bit_fields {
 //#else
 // second attempt
 //
-union _bits {
-  unsigned int ival;
-  struct _bit_fields bval;
-};
+// union _bits {
+//   unsigned int ival;
+//   struct _bit_fields bval;
+// };
 
-int main(void)
-{
-  union _bits x;
+// int main(void)
+// {
+//   union _bits x;
 
-  x.bval.first_bit = x.bval.next_7_bits = x.bval.last_24_bits = 0;
+//   x.bval.first_bit = x.bval.next_7_bits = x.bval.last_24_bits = 0;
 
-  printf("initially %08x\n", x.ival);
+//   printf("initially %08x\n", x.ival);
 
-  x.bval.first_bit = 1;
-  printf("first_bit %08x\n", x.ival);
-  x.bval.first_bit = 0;
+//   x.bval.first_bit = 1;
+//   printf("first_bit %08x\n", x.ival);
+//   x.bval.first_bit = 0;
 
-  x.bval.next_7_bits = 0x7F;
-  printf("nxt7_bits %08x\n", x.ival);
-  x.bval.next_7_bits = 0;
+//   x.bval.next_7_bits = 0x7F;
+//   printf("nxt7_bits %08x\n", x.ival);
+//   x.bval.next_7_bits = 0;
 
-  x.bval.last_24_bits = 0xFFFFFF;
-  printf("last_bits %08x\n", x.ival);
-  x.bval.last_24_bits = 0;
+//   x.bval.last_24_bits = 0xFFFFFF;
+//   printf("last_bits %08x\n", x.ival);
+//   x.bval.last_24_bits = 0;
 
-  return 0;
-}
+//   return 0;
+// }

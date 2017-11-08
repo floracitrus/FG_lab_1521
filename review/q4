@@ -1,0 +1,31 @@
+A 3  42, 64, 999
+B 2 42, 64, err
+C 2 42 64 err
+D 1 42 err err
+E 0 err err err
+
+a = 0x5555 = 0101 0101 0101 0101
+b = 0xAAAA = 1010 
+ 
+q9
+
+a func in in proc1--code2--
+
+6*4096+2000=24576+2000=26576
+
+Under what circumstances might a call to fork() fail?
+
+the operating sys's process table is full and no more processes can be created
+the operating sys has run out of memory to create a new page table for the child
+the user has exceed their own per-user process creation limit
+
+Under what circumstances does execve() return a value?
+
+
+What should the calling program do if execve() does return?
+it will set the errno variable and use that to generate an error message for the user,
+it normally is a fatal error and the original process might need to exit
+
+
+RSS is the resident set size
+VSZ is the virtual memory size 
